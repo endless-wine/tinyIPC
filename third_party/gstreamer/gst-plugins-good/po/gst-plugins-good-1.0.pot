@@ -1,0 +1,514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gst-plugins-good-1.0 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gst-plugins-good-1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 11:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ext/jack/gstjackaudiosink.c:359 ext/jack/gstjackaudiosrc.c:364
+msgid "Jack server not found"
+msgstr ""
+
+#: ext/jpeg/gstjpegdec.c:974 ext/jpeg/gstjpegdec.c:1246
+#: ext/jpeg/gstjpegdec.c:1255 ext/jpeg/gstjpegdec.c:1265
+#: ext/jpeg/gstjpegdec.c:1274 ext/jpeg/gstjpegdec.c:1558
+#: ext/jpeg/gstjpegdec.c:1586
+msgid "Failed to decode JPEG image"
+msgstr ""
+
+#: ext/jpeg/gstjpegdec.c:1546
+msgid "Failed to read memory"
+msgstr ""
+
+#: ext/lame/gstlamemp3enc.c:407
+msgid ""
+"Failed to configure LAME mp3 audio encoder. Check your encoding parameters."
+msgstr ""
+
+#. <php-emulation-mode>three underscores for ___rate is really really really
+#. * private as opposed to one underscore<php-emulation-mode>
+#. call this MACRO outside of the NULL state so that we have a higher chance
+#. * of actually having a pipeline and bus to get the message through
+#: ext/lame/gstlamemp3enc.c:439 ext/twolame/gsttwolamemp2enc.c:494
+#, c-format
+msgid ""
+"The requested bitrate %d kbit/s for property '%s' is not allowed. The "
+"bitrate was changed to %d kbit/s."
+msgstr ""
+
+#. TRANSLATORS: 'song title' by 'artist name'
+#: ext/pulse/pulsesink.c:3131
+#, c-format
+msgid "'%s' by '%s'"
+msgstr ""
+
+#: ext/shout2/gstshout2.c:651 ext/shout2/gstshout2.c:661
+msgid "Could not connect to server"
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1107
+msgid "No URL set."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1620
+msgid "Could not resolve server name."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1625
+msgid "Could not establish connection to server."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1629
+msgid "Secure connection setup failed."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1635
+msgid ""
+"A network error occurred, or the server closed the connection unexpectedly."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1640
+msgid "Server sent bad data."
+msgstr ""
+
+#: ext/soup/gstsouphttpsrc.c:1933
+msgid "Server does not support seeking."
+msgstr ""
+
+#: ext/twolame/gsttwolamemp2enc.c:417
+msgid "Failed to configure TwoLAME encoder. Check your encoding parameters."
+msgstr ""
+
+#: gst/avi/gstavimux.c:1946
+msgid "No or invalid input audio, AVI stream will be corrupt."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:495 gst/isomp4/qtdemux.c:500
+msgid "This file contains no playable streams."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:546 gst/isomp4/qtdemux.c:7143 gst/isomp4/qtdemux.c:7212
+#: gst/isomp4/qtdemux.c:7502 gst/isomp4/qtdemux.c:8880
+msgid "This file is invalid and cannot be played."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:2973
+msgid "Cannot play stream because it is encrypted with PlayReady DRM."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:4242 gst/isomp4/qtdemux.c:8276
+#: gst/isomp4/qtdemux.c:8283 gst/isomp4/qtdemux.c:9569
+#: gst/isomp4/qtdemux.c:10011 gst/isomp4/qtdemux.c:10018
+#: gst/isomp4/qtdemux.c:13119
+msgid "This file is corrupt and cannot be played."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:4484
+msgid "Invalid atom size."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:4563
+msgid "This file is incomplete and cannot be played."
+msgstr ""
+
+#: gst/isomp4/qtdemux.c:11152
+msgid "The video in this file might not play correctly."
+msgstr ""
+
+#: gst/rtsp/gstrtspsrc.c:7684
+msgid ""
+"No supported stream was found. You might need to install a GStreamer RTSP "
+"extension plugin for Real media streams."
+msgstr ""
+
+#: gst/rtsp/gstrtspsrc.c:7689
+msgid ""
+"No supported stream was found. You might need to allow more transport "
+"protocols or may otherwise be missing the right GStreamer RTSP extension "
+"plugin."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:495 sys/oss4/oss4-source.c:360 sys/oss/gstosssink.c:387
+msgid ""
+"Could not open audio device for playback. Device is being used by another "
+"application."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:505 sys/oss4/oss4-source.c:370 sys/oss/gstosssink.c:394
+msgid ""
+"Could not open audio device for playback. You don't have permission to open "
+"the device."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:516 sys/oss4/oss4-source.c:381 sys/oss/gstosssink.c:402
+msgid "Could not open audio device for playback."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:525 sys/oss4/oss4-source.c:391
+msgid ""
+"Could not open audio device for playback. This version of the Open Sound "
+"System is not supported by this element."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:648
+msgid "Playback is not supported by this audio device."
+msgstr ""
+
+#: sys/oss4/oss4-sink.c:655
+msgid "Audio playback error."
+msgstr ""
+
+#: sys/oss4/oss4-source.c:505
+msgid "Recording is not supported by this audio device."
+msgstr ""
+
+#: sys/oss4/oss4-source.c:512
+msgid "Error recording from audio device."
+msgstr ""
+
+#: sys/oss/gstosssrc.c:379
+msgid ""
+"Could not open audio device for recording. You don't have permission to open "
+"the device."
+msgstr ""
+
+#: sys/oss/gstosssrc.c:387
+msgid "Could not open audio device for recording."
+msgstr ""
+
+#: sys/osxaudio/gstosxaudioringbuffer.c:149
+msgid "CoreAudio device not found"
+msgstr ""
+
+#: sys/osxaudio/gstosxaudioringbuffer.c:155
+msgid "CoreAudio device could not be opened"
+msgstr ""
+
+#: sys/rpicamsrc/gstrpicamsrcdeviceprovider.c:148
+msgid "Raspberry Pi Camera Module"
+msgstr ""
+
+#: sys/v4l2/gstv4l2bufferpool.c:1913
+#, c-format
+msgid "Error reading %d bytes from device '%s'."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:1236
+#, c-format
+msgid "Failed to enumerate possible video formats device '%s' can work with"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:3145
+#, c-format
+msgid "Could not map buffers from device '%s'"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:3153
+#, c-format
+msgid "The driver of device '%s' does not support the IO method %d"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:3160
+#, c-format
+msgid "The driver of device '%s' does not support any known IO method."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4008
+msgid "Invalid caps"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4015 sys/v4l2/gstv4l2object.c:4039
+#, c-format
+msgid "Device '%s' has no supported format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4021 sys/v4l2/gstv4l2object.c:4045
+#, c-format
+msgid "Device '%s' failed during initialization"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4033
+#, c-format
+msgid "Device '%s' is busy"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4056
+#, c-format
+msgid "Device '%s' cannot capture at %dx%d"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4065
+#, c-format
+msgid "Device '%s' cannot capture in the specified format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4076
+#, c-format
+msgid "Device '%s' does support non-contiguous planes"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4091
+#, c-format
+msgid "Device '%s' does not support %s interlacing"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4105
+#, c-format
+msgid "Device '%s' does not support %s colorimetry"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4117
+#, c-format
+msgid "Could not get parameters on device '%s'"
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4125
+msgid "Video device did not accept new frame rate setting."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4265
+msgid "Video device did not provide output format."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4271
+msgid "Video device returned invalid dimensions."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4279
+msgid "Video device uses an unsupported interlacing method."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:4286
+msgid "Video device uses an unsupported pixel format."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:5052
+msgid "Failed to configure internal buffer pool."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:5058
+msgid "Video device did not suggest any buffer size."
+msgstr ""
+
+#: sys/v4l2/gstv4l2object.c:5073
+msgid "No downstream pool to import from."
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:144
+#, c-format
+msgid "Failed to get settings of tuner %d on device '%s'."
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:151
+#, c-format
+msgid "Error getting capabilities for device '%s'."
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:158
+#, c-format
+msgid "Device '%s' is not a tuner."
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:185
+#, c-format
+msgid "Failed to get radio input on device '%s'. "
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:208
+#, c-format
+msgid "Failed to set input %d on device %s."
+msgstr ""
+
+#: sys/v4l2/gstv4l2radio.c:242
+#, c-format
+msgid "Failed to change mute state for device '%s'."
+msgstr ""
+
+#: sys/v4l2/gstv4l2sink.c:634
+msgid "Failed to allocated required memory."
+msgstr ""
+
+#: sys/v4l2/gstv4l2src.c:760 sys/v4l2/gstv4l2videodec.c:840
+#: sys/v4l2/gstv4l2videoenc.c:821
+msgid "Failed to allocate required memory."
+msgstr ""
+
+#: sys/v4l2/gstv4l2transform.c:144
+#, c-format
+msgid "Converter on device %s has no supported input format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2transform.c:151
+#, c-format
+msgid "Converter on device %s has no supported output format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2videodec.c:145
+#, c-format
+msgid "Decoder on device %s has no supported input format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2videodec.c:322
+#, c-format
+msgid "Decoder on device %s has no supported output format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2videodec.c:854
+msgid "Failed to start decoding thread."
+msgstr ""
+
+#: sys/v4l2/gstv4l2videodec.c:861 sys/v4l2/gstv4l2videoenc.c:842
+msgid "Failed to process frame."
+msgstr ""
+
+#: sys/v4l2/gstv4l2videoenc.c:142
+#, c-format
+msgid "Encoder on device %s has no supported output format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2videoenc.c:149
+#, c-format
+msgid "Encoder on device %s has no supported input format"
+msgstr ""
+
+#: sys/v4l2/gstv4l2videoenc.c:834
+msgid "Failed to start encoding thread."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:92
+#, c-format
+msgid ""
+"Error getting capabilities for device '%s': It isn't a v4l2 driver. Check if "
+"it is a v4l1 driver."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:156
+#, c-format
+msgid "Failed to query attributes of input %d in device %s"
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:187
+#, c-format
+msgid "Failed to get setting of tuner %d on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:235
+#, c-format
+msgid "Failed to query norm on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:417
+#, c-format
+msgid "Failed getting controls attributes on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:609
+#, c-format
+msgid "Cannot identify device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:616
+#, c-format
+msgid "This isn't a device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:623
+#, c-format
+msgid "Could not open device '%s' for reading and writing."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:630
+#, c-format
+msgid "Device '%s' is not a capture device."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:637
+#, c-format
+msgid "Device '%s' is not a output device."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:644
+#, c-format
+msgid "Device '%s' is not a M2M device."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:696
+#, c-format
+msgid "Could not dup device '%s' for reading and writing."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:780
+#, c-format
+msgid "Failed to set norm for device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:818
+#, c-format
+msgid "Failed to get current tuner frequency for device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:860
+#, c-format
+msgid "Failed to set current tuner frequency for device '%s' to %lu Hz."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:894
+#, c-format
+msgid "Failed to get signal strength for device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:930
+#, c-format
+msgid "Failed to get value for control %d on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:965
+#, c-format
+msgid "Failed to set value %d for control %d on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:1025
+#, c-format
+msgid "Failed to set value %s for control %d on device '%s'."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:1114
+#, c-format
+msgid "Failed to get current input on device '%s'. May be it is a radio device"
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:1139
+#, c-format
+msgid "Failed to set input %u on device %s."
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:1186
+#, c-format
+msgid ""
+"Failed to get current output on device '%s'. May be it is a radio device"
+msgstr ""
+
+#: sys/v4l2/v4l2_calls.c:1211
+#, c-format
+msgid "Failed to set output %u on device %s."
+msgstr ""
+
+#: sys/ximage/gstximagesrc.c:837
+msgid "Changing resolution at runtime is not yet supported."
+msgstr ""
+
+#: sys/ximage/gstximagesrc.c:851
+msgid "Cannot operate without a clock"
+msgstr ""

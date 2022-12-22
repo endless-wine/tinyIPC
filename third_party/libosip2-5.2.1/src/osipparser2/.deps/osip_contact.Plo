@@ -1,0 +1,267 @@
+osip_contact.lo: osip_contact.c \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdc-predef.h \
+ ../../include/osipparser2/internal.h ../../osip-config.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/string.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/libc-header-start.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/features.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/cdefs.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/wordsize.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/long-double.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/gnu/stubs.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/gnu/stubs-soft.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/lib/gcc/arm-linux-gnueabi/6.3.0/include/stddef.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/xlocale.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/string.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/string2.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdlib.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdio.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/typesizes.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/libio.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/_G_config.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/wchar.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/lib/gcc/arm-linux-gnueabi/6.3.0/include/stdarg.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdio_lim.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sys_errlist.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdio.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/waitflags.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/waitstatus.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/types.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/clock_t.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/clockid_t.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/time_t.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/timer_t.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/endian.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/endian.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/byteswap.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/byteswap-16.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/uintn-identity.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/select.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/select.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sigset.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_timeval.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_timespec.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/sysmacros.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sysmacros.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/pthreadtypes.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/alloca.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdlib-bsearch.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdlib-float.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/time.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/time.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_tm.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_itimerspec.h \
+ /opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/time.h \
+ ../../include/osipparser2/osip_port.h \
+ ../../include/osipparser2/osip_const.h \
+ ../../include/osipparser2/osip_list.h \
+ ../../include/osipparser2/osip_message.h \
+ ../../include/osipparser2/osip_headers.h \
+ ../../include/osipparser2/osip_uri.h \
+ ../../include/osipparser2/headers/osip_header.h \
+ ../../include/osipparser2/headers/osip_accept.h \
+ ../../include/osipparser2/headers/osip_content_type.h \
+ ../../include/osipparser2/headers/osip_accept_encoding.h \
+ ../../include/osipparser2/headers/osip_accept_language.h \
+ ../../include/osipparser2/headers/osip_alert_info.h \
+ ../../include/osipparser2/headers/osip_call_info.h \
+ ../../include/osipparser2/headers/osip_allow.h \
+ ../../include/osipparser2/headers/osip_content_length.h \
+ ../../include/osipparser2/headers/osip_authentication_info.h \
+ ../../include/osipparser2/headers/osip_authorization.h \
+ ../../include/osipparser2/headers/osip_call_id.h \
+ ../../include/osipparser2/headers/osip_contact.h \
+ ../../include/osipparser2/headers/osip_from.h \
+ ../../include/osipparser2/headers/osip_content_disposition.h \
+ ../../include/osipparser2/headers/osip_content_encoding.h \
+ ../../include/osipparser2/headers/osip_cseq.h \
+ ../../include/osipparser2/headers/osip_error_info.h \
+ ../../include/osipparser2/headers/osip_mime_version.h \
+ ../../include/osipparser2/headers/osip_proxy_authenticate.h \
+ ../../include/osipparser2/headers/osip_www_authenticate.h \
+ ../../include/osipparser2/headers/osip_proxy_authentication_info.h \
+ ../../include/osipparser2/headers/osip_proxy_authorization.h \
+ ../../include/osipparser2/headers/osip_record_route.h \
+ ../../include/osipparser2/headers/osip_route.h \
+ ../../include/osipparser2/headers/osip_to.h \
+ ../../include/osipparser2/headers/osip_via.h \
+ ../../include/osipparser2/osip_body.h \
+ ../../include/osipparser2/osip_parser.h
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdc-predef.h:
+
+../../include/osipparser2/internal.h:
+
+../../osip-config.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/string.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/libc-header-start.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/features.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/cdefs.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/wordsize.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/long-double.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/gnu/stubs.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/gnu/stubs-soft.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/lib/gcc/arm-linux-gnueabi/6.3.0/include/stddef.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/xlocale.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/string.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/string2.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdlib.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/stdio.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/typesizes.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/libio.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/_G_config.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/wchar.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/lib/gcc/arm-linux-gnueabi/6.3.0/include/stdarg.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdio_lim.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sys_errlist.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdio.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/waitflags.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/waitstatus.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/types.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/clock_t.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/clockid_t.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/time_t.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/timer_t.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/endian.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/byteswap.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/byteswap-16.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/uintn-identity.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/select.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/select.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sigset.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_timeval.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_timespec.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/sysmacros.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/sysmacros.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/pthreadtypes.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/alloca.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdlib-bsearch.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/stdlib-float.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/time.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/time.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_tm.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/bits/types/struct_itimerspec.h:
+
+/opt/hisi-linux/x86-arm/arm-himix200-linux/target/usr/include/sys/time.h:
+
+../../include/osipparser2/osip_port.h:
+
+../../include/osipparser2/osip_const.h:
+
+../../include/osipparser2/osip_list.h:
+
+../../include/osipparser2/osip_message.h:
+
+../../include/osipparser2/osip_headers.h:
+
+../../include/osipparser2/osip_uri.h:
+
+../../include/osipparser2/headers/osip_header.h:
+
+../../include/osipparser2/headers/osip_accept.h:
+
+../../include/osipparser2/headers/osip_content_type.h:
+
+../../include/osipparser2/headers/osip_accept_encoding.h:
+
+../../include/osipparser2/headers/osip_accept_language.h:
+
+../../include/osipparser2/headers/osip_alert_info.h:
+
+../../include/osipparser2/headers/osip_call_info.h:
+
+../../include/osipparser2/headers/osip_allow.h:
+
+../../include/osipparser2/headers/osip_content_length.h:
+
+../../include/osipparser2/headers/osip_authentication_info.h:
+
+../../include/osipparser2/headers/osip_authorization.h:
+
+../../include/osipparser2/headers/osip_call_id.h:
+
+../../include/osipparser2/headers/osip_contact.h:
+
+../../include/osipparser2/headers/osip_from.h:
+
+../../include/osipparser2/headers/osip_content_disposition.h:
+
+../../include/osipparser2/headers/osip_content_encoding.h:
+
+../../include/osipparser2/headers/osip_cseq.h:
+
+../../include/osipparser2/headers/osip_error_info.h:
+
+../../include/osipparser2/headers/osip_mime_version.h:
+
+../../include/osipparser2/headers/osip_proxy_authenticate.h:
+
+../../include/osipparser2/headers/osip_www_authenticate.h:
+
+../../include/osipparser2/headers/osip_proxy_authentication_info.h:
+
+../../include/osipparser2/headers/osip_proxy_authorization.h:
+
+../../include/osipparser2/headers/osip_record_route.h:
+
+../../include/osipparser2/headers/osip_route.h:
+
+../../include/osipparser2/headers/osip_to.h:
+
+../../include/osipparser2/headers/osip_via.h:
+
+../../include/osipparser2/osip_body.h:
+
+../../include/osipparser2/osip_parser.h:

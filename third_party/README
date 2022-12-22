@@ -1,0 +1,80 @@
+#三方开源库
+
+## 开源库记录
+
+[
+    {
+        "Name": "FFmpeg",
+        "License": "LGPL V2.1/LGPL V3.0/GPL V2.0/GPL V3.0",
+        "License File": "COPYING.LGPLv2.1/COPYING.LGPLv3/COPYING.GPLv2/COPYING.GPLv3",
+        "Version Number": "5.0.1 Lorentz",
+        "Upstream URL": "http://www.ffmpeg.org/",
+        "Description": "FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created."
+    },
+    {
+        "Name": "JSON for Modern C++",
+        "License": "MIT License",
+        "License File": "LICENSE.md",
+        "Version Number": "3.10.5",
+        "Upstream URL": "https://github.com/nlohmann/json",
+        "Description": "The JSON for Modern C++ Library has intutitve syntax, trivial integration and memory efficiency features."
+    },
+    {
+        "Name": "spdlog",
+        "License": "MIT License",
+        "License File": "LICENSE.md",
+        "Version Number": "1.10.0",
+        "Upstream URL": "https://github.com/gabime/spdlog",
+        "Description": "Fast C++ logging library."
+    },
+    {
+        "Name": "googletest",
+        "License": "BSD 3-Clause License",
+        "License File": "LICENSE",
+        "Version Number": "1.11.0",
+        "Owner": "zhangchunbao@huawei.com",
+        "Upstream URL": "https://github.com/google/googletest/releases/tag/release-1.11.0",
+        "Description": "googletest",
+        "make": "cmake -G "Ninja" -DCMAKE_TOOLCHAIN_FILE=../../platform.cmake .."
+    },
+    {
+        "Name": "c-ares-1.18.1",
+        "License": "BSD 3-Clause License",
+        "License File": "LICENSE",
+        "Version Number": "1.11.0",
+        "Owner": "zhangchunbao@huawei.com",
+        "Upstream URL": "https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz",
+        "Description": "c-ares-1.18.1",
+        "make": "./configure --host=arm CXX=arm-himix200-linux-g++ CC=arm-himix200-linux-gcc;make"
+    },
+    {
+        "Name": "libexosip2-5.3.0",
+        "License": "BSD 3-Clause License",
+        "License File": "LICENSE",
+        "Version Number": "1.11.0",
+        "Owner": "zhangchunbao@huawei.com",
+        "Upstream URL": "http://download.savannah.nongnu.org/releases/exosip/",
+        "Description": "libexosip2-5.3.0",
+        "make": "./configure --prefix=/root/include/ --host=arm CXX=arm-himix200-linux-g++ CC=arm-himix200-linux-gcc;make"
+    },
+    {
+        "Name": "libosip2-5.2.1",
+        "License": "BSD 3-Clause License",
+        "License File": "LICENSE",
+        "Version Number": "1.11.0",
+        "Owner": "zhangchunbao@huawei.com",
+        "Upstream URL": "http://download.savannah.nongnu.org/releases/osip/",
+        "Description": "libosip2-5.2.1",
+        "make": "./configure --prefix=/root/include/ --host=arm CXX=arm-himix200-linux-g++ CC=arm-himix200-linux-gcc;make"
+    },
+    {
+        "Name": "openssl-OpenSSL_1_1_1q",
+        "License": "BSD 3-Clause License",
+        "License File": "LICENSE",
+        "Version Number": "1.11.0",
+        "Owner": "zhangchunbao@huawei.com",
+        "Upstream URL": "https://www.openssl.org/source/openssl-3.0.5.tar.gz",
+        "Description": "libosip2-5.2.1",
+        "make": "./Configure --prefix=/root/include/ no-asm no-threads linux-generic32 CXX=arm-himix200-linux-g++ CC=arm-himix200-linux-gcc;make"
+    }
+]
