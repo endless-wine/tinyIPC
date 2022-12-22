@@ -1,6 +1,6 @@
 #include "config.h"
 
-namespace ti {
+namespace endless {
 namespace base {
 
 config::config(/* args */) {}
@@ -8,4 +8,4 @@ config::config(/* args */) {}
 config::~config() {}
 
 } // namespace base
-} // namespace ti
+} // namespace endless

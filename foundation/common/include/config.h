@@ -1,14 +1,14 @@
-#include <stdio.h>
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
+#include <stdio.h>
 
-namespace ti {
+namespace endless {
 namespace base {
 
 class IConfig {
 
 public:
-    IConfig(/* args */);
+    IConfig();
     ~IConfig();
 
 private:
@@ -16,4 +16,4 @@ private:
 };
 
 } // namespace base
-} // namespace ti
+} // namespace endless
