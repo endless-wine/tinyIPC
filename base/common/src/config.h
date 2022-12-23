@@ -1,11 +1,12 @@
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <stdio.h>
+#include <nlohmann/json.hpp>
 
 namespace endless {
 namespace base {
 
-class IConfig {
+class CConfig : public IConfig {
 
 public:
     IConfig();
