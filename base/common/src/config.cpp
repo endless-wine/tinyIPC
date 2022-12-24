@@ -1,11 +1,11 @@
-#include "config/config.h"
+#include "config.h"
 
-namespace endless {
-namespace base {
+namespace Endless {
+namespace Common {
 
-config::config() {}
+CConfig::CConfig() {}
 
-config::~config() {}
+CConfig::~CConfig() {}
 
-} // namespace base
-} // namespace endless
+} // namespace Common
+} // namespace Endless

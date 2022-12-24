@@ -1,15 +1,16 @@
+#include "config/config.h"
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <stdio.h>
 
-namespace endless {
-namespace base {
+namespace Endless {
+namespace Common {
 
 class CConfig : public IConfig {
 
 public:
-    IConfig();
-    ~IConfig();
+    CConfig();
+    ~CConfig();
 
 private:
     /* data */
