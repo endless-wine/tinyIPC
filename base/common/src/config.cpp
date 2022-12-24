@@ -1,9 +1,9 @@
-#include "config.h"
+#include "config/config.h"
 
 namespace endless {
 namespace base {
 
-config::config(/* args */) {}
+config::config() {}
 
 config::~config() {}
 

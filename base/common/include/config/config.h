@@ -1,10 +1,11 @@
+#pragma once
+
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <stdio.h>
-#include <stdio.h>
 
-namespace endless {
-namespace common {
+namespace Endless {
+namespace Common {
 
 class IConfig {
 
@@ -16,5 +17,5 @@ private:
     /* data */
 };
 
-} // namespace common
-} // namespace endless
+} // namespace Common
+} // namespace Endless

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTILS_TIMER_H
+#define UTILS_TIMER_H
 
 #include <atomic>
 #include <chrono>
@@ -8,8 +9,9 @@
 #include <mutex>
 #include <thread>
 
-namespace ti {
-namespace base {
+namespace Endless {
+namespace Utils {
+
 class Timer {
 public:
     Timer() : stopStatus_(true), tryStopFlag_(false) {}
@@ -74,5 +76,7 @@ private:
     std::mutex mutex_;
     std::condition_variable timerCond_;
 };
-} // namespace base
-} // namespace ti
+} // namespace Utils
+} // namespace Endless
+
+#endif // UTILS_TIMER_H

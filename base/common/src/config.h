@@ -1,7 +1,6 @@
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <stdio.h>
-#include <nlohmann/json.hpp>
 
 namespace endless {
 namespace base {
