@@ -35,10 +35,10 @@ bool CConfig::ReadFile(const std::string &path, nlohmann::json &root)
     }
 
     std::vector<char> content;
-    if (LoadBufferFromFile(path.c_str(), content)) {
-        root = nlohmann::json::parse(content);
+    if (!LoadBufferFromFile(path.c_str(), content)) {
         return false;
     }
+    root = nlohmann::json::parse(content);
     return true;
 }
 
@@ -55,6 +55,32 @@ bool CConfig::CopyFile(const std::string &from, const std::string &to)
         return false;
     }
 
+    return true;
+}
+
+bool CConfig::WriteFile(const std::string &path, const nlohmann::json &root)
+{
+    if (path.empty()) {
+        return false;
+    }
+
+    std::string json = root.dump();
+    std::vector<char> content;
+    content.assign(json.begin(), json.end());
+    if (!SaveBufferToFile(path, content, true)) {
+        return false;
+    }
+
+    return true;
+}
+
+bool CConfig::SaveFile()
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+    
+    // 保存配置文件
+    WriteFile(firstPath_, config_);
+    WriteFile(secondPath_, config_);
     return true;
 }
 
@@ -99,13 +125,16 @@ bool CConfig::GetConfig(const std::string &name, nlohmann::json &config)
 
 bool CConfig::SetConfig(const std::string &name, const nlohmann::json &config)
 {
-    std::lock_guard<std::mutex> lock(mutex_);
-
-    if (name == "All") {
-        config_ = config;
-        return true;
+    {
+        std::lock_guard<std::mutex> lock(mutex_);
+        if (name == "All") {
+            config_ = config;
+        } else {
+            config_[name] = config;
+        }
     }
-    config_[name] = config;
+
+    SaveFile();
 
     return true;
 }

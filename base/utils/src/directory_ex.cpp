@@ -1,9 +1,9 @@
 #include "directory_ex.h"
-#include <dirent.h>
-#include <errno.h>
 #include "securec.h"
 #include "unistd.h"
 #include "utils_log.h"
+#include <dirent.h>
+#include <errno.h>
 using namespace std;
 
 namespace Endless {
@@ -25,17 +25,17 @@ string GetCurrentProcPath()
     return ExtractFilePath(GetCurrentProcFullFileName());
 }
 
-string ExtractFilePath(const string& fileFullName)
+string ExtractFilePath(const string &fileFullName)
 {
     return string(fileFullName).substr(0, fileFullName.rfind("/") + 1);
 }
 
-std::string ExtractFileName(const std::string& fileFullName)
+std::string ExtractFileName(const std::string &fileFullName)
 {
     return string(fileFullName).substr(fileFullName.rfind("/") + 1, fileFullName.size());
 }
 
-string ExtractFileExt(const string& fileName)
+string ExtractFileExt(const string &fileName)
 {
     string::size_type pos = fileName.rfind(".");
     if (pos == string::npos) {
@@ -45,7 +45,7 @@ string ExtractFileExt(const string& fileName)
     return string(fileName).substr(pos + 1, fileName.size());
 }
 
-string ExcludeTrailingPathDelimiter(const std::string& path)
+string ExcludeTrailingPathDelimiter(const std::string &path)
 {
     if (path.rfind("/") != path.size() - 1) {
         return path;
@@ -58,7 +58,7 @@ string ExcludeTrailingPathDelimiter(const std::string& path)
     return path;
 }
 
-string IncludeTrailingPathDelimiter(const std::string& path)
+string IncludeTrailingPathDelimiter(const std::string &path)
 {
     if (path.rfind("/") != path.size() - 1) {
         return path + "/";
@@ -67,7 +67,7 @@ string IncludeTrailingPathDelimiter(const std::string& path)
     return path;
 }
 
-void GetDirFiles(const string& path, vector<string>& files)
+void GetDirFiles(const string &path, vector<string> &files)
 {
     string pathStringWithDelimiter;
     DIR *dir = opendir(path.c_str());
@@ -94,7 +94,7 @@ void GetDirFiles(const string& path, vector<string>& files)
     closedir(dir);
 }
 
-bool ForceCreateDirectory(const string& path)
+bool ForceCreateDirectory(const string &path)
 {
     string::size_type index = 0;
     do {
@@ -116,7 +116,7 @@ bool ForceCreateDirectory(const string& path)
     return access(path.c_str(), F_OK) == 0;
 }
 
-bool ForceRemoveDirectory(const string& path)
+bool ForceRemoveDirectory(const string &path)
 {
     string subPath;
     bool ret = true;
@@ -159,7 +159,7 @@ bool ForceRemoveDirectory(const string& path)
     return ret && (access(path.c_str(), F_OK) != 0);
 }
 
-bool RemoveFile(const string& fileName)
+bool RemoveFile(const string &fileName)
 {
     if (access(fileName.c_str(), F_OK) == 0) {
         return remove(fileName.c_str()) == 0;
@@ -168,21 +168,21 @@ bool RemoveFile(const string& fileName)
     return true;
 }
 
-bool IsEmptyFolder(const string& path)
+bool IsEmptyFolder(const string &path)
 {
     vector<string> files;
     GetDirFiles(path, files);
     return files.empty();
 }
 
-uint64_t GetFolderSize(const string& path)
+uint64_t GetFolderSize(const string &path)
 {
     vector<string> files;
     struct stat statbuf;
-    memset_s(&statbuf, sizeof(statbuf), 0, sizeof(statbuf));
+    memset(&statbuf, 0, sizeof(statbuf));
     GetDirFiles(path, files);
     uint64_t totalSize = 0;
-    for (auto& file : files) {
+    for (auto &file : files) {
         if (stat(file.c_str(), &statbuf) == 0) {
             totalSize += statbuf.st_size;
         }
@@ -192,12 +192,12 @@ uint64_t GetFolderSize(const string& path)
 }
 
 // inner function, and param is legitimate
-bool ChangeMode(const string& fileName, const mode_t& mode)
+bool ChangeMode(const string &fileName, const mode_t &mode)
 {
     return (chmod(fileName.c_str(), mode) == 0);
 }
 
-bool ChangeModeFile(const string& fileName, const mode_t& mode)
+bool ChangeModeFile(const string &fileName, const mode_t &mode)
 {
     if (access(fileName.c_str(), F_OK) != 0) {
         return false;
@@ -206,7 +206,7 @@ bool ChangeModeFile(const string& fileName, const mode_t& mode)
     return ChangeMode(fileName, mode);
 }
 
-bool ChangeModeDirectory(const string& path, const mode_t& mode)
+bool ChangeModeDirectory(const string &path, const mode_t &mode)
 {
     string subPath;
     bool ret = true;
@@ -249,7 +249,7 @@ bool ChangeModeDirectory(const string& path, const mode_t& mode)
     return ret;
 }
 
-bool PathToRealPath(const string& path, string& realPath)
+bool PathToRealPath(const string &path, string &realPath)
 {
     if (path.empty()) {
         UTILS_LOGD("path is empty!");
@@ -275,4 +275,4 @@ bool PathToRealPath(const string& path, string& realPath)
     return true;
 }
 
-} // OHOS
+} // namespace Endless

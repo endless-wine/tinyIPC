@@ -11,21 +11,21 @@ namespace Common {
 class CConfig : public IConfig {
 
 public:
-    CConfig();
+    CConfig() = default;
     ~CConfig() override = default;
 
     static CConfig &GetInstance();
 
     /**
      * @brief Load config from file
-     * "FirstPath" : "/mnt/config/config1", //第一个配置文件路径
-     * "SecondPath" : "/mnt/config/config2", //第二个配置文件路径
-     * "DefaultPath": "/mnt/config/defaultConfig", //默认配置文件路径
+     * "FirstPath" : "/config/config1", //第一个配置文件路径
+     * "SecondPath" : "/config/config2", //第二个配置文件路径
+     * "DefaultPath": "/config/defaultConfig", //默认配置文件路径
      */
     bool LoadConfig(nlohmann::json &param) override;
 
     bool GetConfig(const std::string &name, nlohmann::json &config) override;
-    
+
     bool SetConfig(const std::string &name, const nlohmann::json &config) override;
 
 private:
@@ -34,6 +34,8 @@ private:
                             const std::string &secondFilePath,
                             nlohmann::json &config);
     bool CopyFile(const std::string &from, const std::string &to);
+    bool WriteFile(const std::string &path, const nlohmann::json &root);
+    bool SaveFile();
 
 private:
     std::string firstPath_;

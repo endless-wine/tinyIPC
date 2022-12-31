@@ -9,7 +9,7 @@ endif()
 message("chip id: ${CHIP_ID}")
 
 include_directories(${PROJECT_SOURCE_DIR}/third_party/json/single_include/ ${PROJECT_SOURCE_DIR}/third_party/spdlog/include/ ${PROJECT_SOURCE_DIR}/third_party/googletest/googletest/include/
-${PROJECT_SOURCE_DIR}/base/utils/include/ ${PROJECT_SOURCE_DIR}/drivers/interfaces/)
+${PROJECT_SOURCE_DIR}/base/utils/include/ ${PROJECT_SOURCE_DIR}/base/common/include/ ${PROJECT_SOURCE_DIR}/drivers/interfaces/)
 
 add_subdirectory(base)
 add_subdirectory(foundation)

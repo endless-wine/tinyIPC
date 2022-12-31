@@ -1,16 +1,29 @@
-#include <stdio.h>
+#include "common/config.h"
+#include <chrono>
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
+#include <stdio.h>
 #include <thread>
-#include <chrono>
 
 int main(int argc, char **argv)
 {
     (void)argc;
     (void)argv;
-    nlohmann::json json;
-    json["hello"] = "world";
-    spdlog::info("sky start {}", json.dump().c_str());
+    spdlog::info("application start");
+
+    nlohmann::json param;
+    param["FirstPath"] = "firstPath";
+    param["SecondPath"] = "secondPath";
+    param["DefaultPath"] = "defaultPath";
+    Endless::Common::IConfig::GetInstance().LoadConfig(param);
+
+    nlohmann::json record;
+    record["enable"] = true;
+    Endless::Common::IConfig::GetInstance().SetConfig("record", record);
+
+    record.clear();
+    Endless::Common::IConfig::GetInstance().GetConfig("record", record);
+    spdlog::info("cnfig record {}", record.dump().c_str());
 
     while (1) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
