@@ -6,6 +6,8 @@
 
 int main(int argc, char **argv)
 {
+    (void)argc;
+    (void)argv;
     nlohmann::json json;
     json["hello"] = "world";
     spdlog::info("sky start {}", json.dump().c_str());

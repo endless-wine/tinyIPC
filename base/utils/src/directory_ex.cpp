@@ -178,7 +178,8 @@ bool IsEmptyFolder(const string& path)
 uint64_t GetFolderSize(const string& path)
 {
     vector<string> files;
-    struct stat statbuf = {0};
+    struct stat statbuf;
+    memset_s(&statbuf, sizeof(statbuf), 0, sizeof(statbuf));
     GetDirFiles(path, files);
     uint64_t totalSize = 0;
     for (auto& file : files) {
