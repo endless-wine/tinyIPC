@@ -1,5 +1,6 @@
 #include "config.h"
 #include "utils/file_ex.h"
+#include <algorithm>
 
 namespace Endless {
 namespace Common {
@@ -77,7 +78,7 @@ bool CConfig::WriteFile(const std::string &path, const nlohmann::json &root)
 bool CConfig::SaveFile()
 {
     std::lock_guard<std::mutex> lock(mutex_);
-    
+
     // 保存配置文件
     WriteFile(firstPath_, config_);
     WriteFile(secondPath_, config_);
@@ -130,11 +131,66 @@ bool CConfig::SetConfig(const std::string &name, const nlohmann::json &config)
         if (name == "All") {
             config_ = config;
         } else {
+            OnProc(name, config);
             config_[name] = config;
         }
     }
 
     SaveFile();
+
+    return true;
+}
+
+int32_t CConfig::Attach(const std::string &name, Proc proc)
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto it = procs_.find(name);
+    if (it == procs_.end()) {
+        std::vector<std::pair<int32_t, Proc>> procs;
+        procs.push_back(std::make_pair(++count_, proc));
+        procs_[name] = procs;
+    } else {
+        it->second.push_back(std::make_pair(++count_, proc));
+    }
+
+    return count_;
+}
+
+bool CConfig::Detach(const std::string &name, int32_t handle)
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto it = procs_.find(name);
+    if (it == procs_.end()) {
+        return false;
+    }
+
+    auto &procs = it->second;
+    auto itProc = std::find_if(procs.begin(), procs.end(), [handle](const std::pair<int32_t, Proc> &proc) {
+        if (proc.first == handle) {
+            return true;
+        }
+        return false;
+    });
+
+    if (itProc == procs.end()) {
+        return false;
+    }
+    procs.erase(itProc);
+    return true;
+}
+
+bool CConfig::OnProc(const std::string &name, const nlohmann::json &config)
+{
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto it = procs_.find(name);
+    if (it == procs_.end()) {
+        return false;
+    }
+
+    auto &procs = it->second;
+    for (auto &proc : procs) {
+        proc.second(config);
+    }
 
     return true;
 }

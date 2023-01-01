@@ -28,6 +28,10 @@ public:
 
     bool SetConfig(const std::string &name, const nlohmann::json &config) override;
 
+    int32_t Attach(const std::string &name, Proc proc) override;
+
+    bool Detach(const std::string &name, int32_t handle) override;
+
 private:
     bool ReadFile(const std::string &path, nlohmann::json &root);
     bool ReadConfigFromFile(const std::string &firstFilePath,
@@ -36,14 +40,16 @@ private:
     bool CopyFile(const std::string &from, const std::string &to);
     bool WriteFile(const std::string &path, const nlohmann::json &root);
     bool SaveFile();
+    bool OnProc(const std::string &name, const nlohmann::json &config);
 
 private:
     std::string firstPath_;
     std::string secondPath_;
     std::string defaultPath_;
-
     nlohmann::json config_;
     std::mutex mutex_;
+    std::map<std::string, std::vector<std::pair<int32_t, Proc>>> procs_;
+    int32_t count_{0};
 };
 
 } // namespace Common
