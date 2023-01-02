@@ -181,7 +181,6 @@ bool CConfig::Detach(const std::string &name, int32_t handle)
 
 bool CConfig::OnProc(const std::string &name, const nlohmann::json &config)
 {
-    std::lock_guard<std::mutex> lock(mutex_);
     auto it = procs_.find(name);
     if (it == procs_.end()) {
         return false;

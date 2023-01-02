@@ -1,31 +1,63 @@
-Checks: '-*,readability-identifier-naming,readability-function-size,
-         readability-braces-around-statements,readability-magic-numbers,
-         misc-unused-parameters,modernize-use-nullptr,modernize-replace-auto-ptr,
-         modernize-use-noexcept,modernize-use-override,performance-move-const-arg,
-         cppcoreguidelines-pro-type-cstyle-cast,cppcoreguidelines-pro-type-reinterpret-cast,
-         cppcoreguidelines-pro-type-const-cast'
+---
+# Note well! The list of global exceptions is maintained in cmake/ClangTidy.cmake
+WarningsAsErrors: '*'
+HeaderFilterRegex: '.*/(assembler|compiler|debugger|libpandabase|libpandafile|runtime|class2panda)/.*'
+AnalyzeTemporaryDtors: false
+User:            user
 CheckOptions:
-  - key:             readability-identifier-naming.ClassCase
+  - key:             google-readability-braces-around-statements.ShortStatementLines
+    value:           '1'
+  - key:             google-readability-function-size.StatementThreshold
+    value:           '800'
+  - key:             google-readability-namespace-comments.ShortNamespaceLines
+    value:           '10'
+  - key:             google-readability-namespace-comments.SpacesBeforeComments
+    value:           '2'
+  - key:             modernize-loop-convert.MaxCopySize
+    value:           '16'
+  - key:             modernize-loop-convert.MinConfidence
+    value:           reasonable
+  - key:             modernize-loop-convert.NamingStyle
     value:           CamelCase
-  - key:             readability-identifier-naming.StructCase
+  - key:             modernize-pass-by-value.IncludeStyle
+    value:           llvm
+  - key:             modernize-replace-auto-ptr.IncludeStyle
+    value:           llvm
+  - key:             modernize-use-nullptr.NullMacros
+    value:           'NULL'
+  - key:             readability-identifier-naming.ClassMethodCase
     value:           CamelCase
-  - key:             readability-identifier-naming.TypedefCase
-    value:           CamelCase
-  - key:             readability-identifier-naming.EnumCase
+  - key:             readability-identifier-naming.MethodCase
     value:           CamelCase
   - key:             readability-identifier-naming.EnumConstantCase
-    value:           camelBack
-  - key:             readability-identifier-naming.UnionCase
-    value:           CamelCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.ConstantCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.ConstantMemberCase
+    value:           UPPER_CASE
+  - key:             readability-function-size.LineThreshold
+    value:           200
   - key:             readability-identifier-naming.NamespaceCase
     value:           lower_case
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.PrivateMemberSuffix
+    value:           _
+  - key:             readability-identifier-naming.StructCase
+    value:           CamelCase
   - key:             readability-identifier-naming.FunctionCase
     value:           CamelCase
   - key:             readability-identifier-naming.VariableCase
-    value:           camelBack
-  - key:             readability-identifier-naming.ConstantCase
-    value:           camelBack
-  - key:             readability-function-size.StatementThreshold
-    value:           50
-  - key:             readability-function-size.ParameterThreshold
-    value:           5
+    value:           lower_case
+  - key:             readability-identifier-naming.GlobalConstantCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.GlobalConstantPrefix 
+    value:           g_
+  - key:             readability-identifier-naming.LocalVariableCase  
+    value:           CamelCase
+  - key:             readability-identifier-naming.ParameterCase
+    value:           lower_case
+  - key:             readability-magic-numbers.IgnoredIntegerValues
+    value:           '1;2;3;4;5;6;7;8'
+...
+
