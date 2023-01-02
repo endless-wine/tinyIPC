@@ -1,2 +1,3 @@
 include_directories(./include/utils)
-add_subdirectory(src)
+aux_source_directory(./src/ COMMON_SRCS)
+add_library(utils STATIC ${COMMON_SRCS})
