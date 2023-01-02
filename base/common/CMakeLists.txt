@@ -1,2 +1,3 @@
 include_directories(./include)
-add_subdirectory(src)
+aux_source_directory(./src/ COMMON_SRCS)
+add_library(common STATIC ${COMMON_SRCS})
