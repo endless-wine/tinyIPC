@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <vector>
 
-namespace Endless {
+namespace EL {
 
 /**
  * The GetCurrentProcFullFileName function get the current process exe name.
@@ -95,5 +95,5 @@ bool ChangeModeDirectory(const std::string &path, const mode_t &mode);
  * return true if change succ, else false.
  */
 bool PathToRealPath(const std::string &path, std::string &realPath);
-} // namespace Endless
+} // namespace EL
 #endif

@@ -4,7 +4,7 @@
 #include <spdlog/spdlog.h>
 #include <stdio.h>
 
-namespace Endless {
+namespace EL {
 namespace Common {
 
 class IConfig {
@@ -30,4 +30,4 @@ public:
 };
 
 } // namespace Common
-} // namespace Endless
+} // namespace EL

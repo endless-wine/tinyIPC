@@ -20,7 +20,7 @@ const int MAX_FILE_LENGTH = 32 * 1024 * 1024;
 #define PATH_MAX 4096
 #endif
 
-namespace Endless {
+namespace EL {
 
 bool LoadStringFromFile(const string &filePath, string &content)
 {
@@ -336,4 +336,4 @@ int CountStrInFile(const string &fileName, const string &subStr, bool caseSensit
     transform(subStr.begin(), subStr.end(), sublower.begin(), ::tolower);
     return CountStrInStr(strlower, sublower);
 }
-} // namespace Endless
+} // namespace EL

@@ -6,7 +6,7 @@
 #include <errno.h>
 using namespace std;
 
-namespace Endless {
+namespace EL {
 
 string GetCurrentProcFullFileName()
 {
@@ -275,4 +275,4 @@ bool PathToRealPath(const string &path, string &realPath)
     return true;
 }
 
-} // namespace Endless
+} // namespace EL

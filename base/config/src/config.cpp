@@ -2,7 +2,7 @@
 #include "utils/file_ex.h"
 #include <algorithm>
 
-namespace Endless {
+namespace EL {
 namespace Common {
 
 CConfig &CConfig::GetInstance()
@@ -195,4 +195,4 @@ bool CConfig::OnProc(const std::string &name, const nlohmann::json &config)
 }
 
 } // namespace Common
-} // namespace Endless
+} // namespace EL

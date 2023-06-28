@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-namespace Endless {
+namespace EL {
 
 bool LoadStringFromFile(const std::string &filePath, std::string &content);
 bool SaveStringToFile(const std::string &filePath, const std::string &content, bool truncated = true);
@@ -16,6 +16,6 @@ bool FileExists(const std::string &fileName);
 bool StringExistsInFile(const std::string &fileName, const std::string &subStr, bool caseSensitive = true);
 int CountStrInFile(const std::string &fileName, const std::string &subStr, bool caseSensitive = true);
 
-} // namespace Endless
+} // namespace EL
 
 #endif

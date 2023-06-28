@@ -15,17 +15,17 @@ int main(int argc, char **argv)
     param["FirstPath"] = "firstPath";
     param["SecondPath"] = "secondPath";
     param["DefaultPath"] = "defaultPath";
-    Endless::Common::IConfig::GetInstance().LoadConfig(param);
+    EL::Common::IConfig::GetInstance().LoadConfig(param);
 
-    Endless::Common::IConfig::GetInstance().Attach(
+    EL::Common::IConfig::GetInstance().Attach(
         "record", [](const nlohmann::json &config) { spdlog::info("on config record {}", config.dump().c_str()); });
 
     nlohmann::json record;
     record["enable"] = true;
-    Endless::Common::IConfig::GetInstance().SetConfig("record", record);
+    EL::Common::IConfig::GetInstance().SetConfig("record", record);
 
     record.clear();
-    Endless::Common::IConfig::GetInstance().GetConfig("record", record);
+    EL::Common::IConfig::GetInstance().GetConfig("record", record);
     spdlog::info("config record {}", record.dump().c_str());
 
     while (1) {

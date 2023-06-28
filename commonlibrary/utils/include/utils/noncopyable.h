@@ -1,7 +1,7 @@
 #ifndef UTILS_NOCOPYABLE_H
 #define UTILS_NOCOPYABLE_H
 
-namespace Endless {
+namespace EL {
 
 #define DISALLOW_COPY_AND_MOVE(className) \
     DISALLOW_COPY(className);             \
@@ -24,6 +24,6 @@ private:
     DISALLOW_COPY_AND_MOVE(NoCopyable);
 };
 
-} // namespace Endless
+} // namespace EL
 
 #endif // UTILS_NOCOPYABLE_H

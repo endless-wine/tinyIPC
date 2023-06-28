@@ -9,7 +9,7 @@
 #include <mutex>
 #include <thread>
 
-namespace Endless {
+namespace EL {
 namespace Utils {
 
 class Timer {
@@ -77,6 +77,6 @@ private:
     std::condition_variable timerCond_;
 };
 } // namespace Utils
-} // namespace Endless
+} // namespace EL
 
 #endif // UTILS_TIMER_H

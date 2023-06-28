@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string>
 
-namespace Endless {
+namespace EL {
 namespace Common {
 
 class CConfig : public IConfig {
@@ -53,4 +53,4 @@ private:
 };
 
 } // namespace Common
-} // namespace Endless
+} // namespace EL
